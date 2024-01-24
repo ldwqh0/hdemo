@@ -9,12 +9,13 @@ import jakarta.persistence.Table;
 @Table(name = "customer_")
 public class Customer {
 
+    @Column(name = "tenant_id_")
+    private Long tenantId;
+
     @Id
     @Column(name = "id_")
     private Long id;
 
-    @Column(name = "tenant_id_")
-    private Long tenantId;
 
     public Customer() {
     }

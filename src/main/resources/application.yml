@@ -17,9 +17,8 @@ spring:
     virtual:
       enabled: true
   datasource:
-    url: 'jdbc:mysql://localhost/jxj2?createDatabaseIfNotExist=true&autoReconnect=true&serverTimezone=Asia/Shanghai'
-    username: 'jxj'
-    password: 'jxj'
+    url: 'jdbc:h2:~/test'
+    username: "sa"
 server:
   error:
     include-message: always
