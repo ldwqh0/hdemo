@@ -16,10 +16,12 @@ public class ReturnOrderItem {
             @JoinColumn(name = "return_order_id_",
                     referencedColumnName = "id_",
                     insertable = false,
-                    updatable = false),
+                    updatable = false
+            ),
             @JoinColumn(name = "tenant_id_",
                     referencedColumnName = "tenant_id_",
-                    insertable = false, updatable = false
+                    insertable = false,
+                    updatable = false
             )
     })
     private ReturnOrder returnOrder;
@@ -29,5 +31,31 @@ public class ReturnOrderItem {
 
     @Column(name = "tenant_id_", updatable = false, nullable = false)
     private Long tenantId;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public ReturnOrder getReturnOrder() {
+        return returnOrder;
+    }
+
+    public void setReturnOrder(ReturnOrder returnOrder) {
+        this.returnOrder = returnOrder;
+        this.returnOrderId = returnOrder.getId();
+    }
+
+    public Long getReturnOrderId() {
+        return returnOrderId;
+    }
+
+    public Long getTenantId() {
+        return tenantId;
+    }
+
 
 }

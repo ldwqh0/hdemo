@@ -16,6 +16,8 @@ public class Order {
     @Column(name = "id_")
     private Long id;
 
+    // getter and setters
+
     public Long getTenantId() {
         return tenantId;
     }

@@ -16,10 +16,7 @@ public class Customer {
     @Column(name = "id_")
     private Long id;
 
-
-    public Customer() {
-    }
-
+    // getters and setters
     public Long getId() {
         return id;
     }

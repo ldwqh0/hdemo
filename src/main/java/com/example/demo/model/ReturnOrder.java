@@ -56,14 +56,46 @@ public class ReturnOrder {
     @Column(name = "customer_id_")
     private Long customerId;
 
+    // getter and setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
     public void setOrder(Order order) {
         this.order = order;
         this.tenantId = order.getTenantId();
         this.orderId = order.getId();
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
     public void setCustomer(Customer customer) {
         this.customer = customer;
         this.customerId = customer.getId();
     }
+
+    public Long getOrderId() {
+        return orderId;
+    }
+
+
+    public Long getTenantId() {
+        return tenantId;
+    }
+
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
 }
